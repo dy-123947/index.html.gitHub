@@ -4,7 +4,243 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services Informatiques</title>
-    <link rel="stylesheet" href="STYLE ST.css">
+    <link rel="stylesheet" href="/* Réinitialisation de base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Bannière */
+.banniere {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #333, #555);
+    padding: 20px;
+    color: white;
+}
+
+.logo img {
+    max-width: 300px;
+    margin-right: 80px;
+}
+
+.titre h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.titre p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+/* Menu principal */
+.menu {
+    list-style: none;
+    padding: 0;
+    background: #f00d8a;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background: #555;
+}
+
+/* Sous-menus */
+.submenu {
+    display: none;
+    position: absolute;
+    background: #444;
+    list-style: none;
+    padding: 0;
+    min-width: 200px;
+    top: 100%;
+    left: 0;
+}
+
+.submenu li {
+    width: 100%;
+}
+
+.submenu a {
+    padding: 10px;
+    display: block;
+    text-align: left;
+}
+
+.submenu a:hover {
+    background: #666;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/* Carrousel */
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.slider {
+    display: flex;
+    width: 300%;
+    animation: slide 25s infinite;
+}
+
+.slide {
+    width: 100%;
+    flex: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* Animation */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* Contenu principal */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Menu droit */
+.menu-droit {
+    flex: 1;
+    background: #f4f4f4;
+    padding: 20px;
+    border-left: 2px solid #ddd;
+}
+
+.menu-droit h3 {
+    color: #333;
+}
+
+.menu-droit ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-droit ul li {
+    margin: 5px 0;
+}
+
+.menu-droit ul li a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.menu-droit ul li a:hover {
+    text-decoration: underline;
+}
+
+.menu-droit p {
+    font-size: 14px;
+    color: #555;
+}
+/* 4 phases de la page d'accueil */
+.phases {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.phase {
+    width: 22%;
+    text-align: center;
+}
+
+.phase img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Correction du carrousel */
+.carousel {
+    position: relative;
+    z-index: 0;
+}
+
+.menu {
+    position: relative;
+    z-index: 1;
+}
+
+/* Panneau à onglets */
+.formulaires {
+    max-width: 600px;
+    margin: auto;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    background: #333;
+    color: rgb(220, 15, 110);
+    padding: 10px;
+}
+
+.tabs label {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.contenu-form {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.formulaire {
+    display: none;
+}
+
+#client:checked ~ .contenu-form #form-client,
+#fournisseur:checked ~ .contenu-form #form-fournisseur,
+#partenaire:checked ~ .contenu-form #form-partenaire {
+    display: block;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/* Pied de page */
+footer {
+    background: #ed1283;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}">
 </head>
 <body>
 
